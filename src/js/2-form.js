@@ -28,8 +28,9 @@ function functionSubmit(eve) {
     };
 
     console.log(formData);
+
+    localStorage.removeItem('feedbackForm');
+    formData = { email: '', message: '' };
+    form.reset();
 };
 
-localStorage.removeItem('feedback-form-state');
-formData = { email: '', message: '' };
-form.reset();
